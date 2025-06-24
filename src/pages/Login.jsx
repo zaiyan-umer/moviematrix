@@ -104,7 +104,7 @@ function Login({ isLoading, setIsLoading }) {
                         onClick={handleGoogleLogin}
                         className="mt-2 bg-white text-black font-semibold px-4 py-2 w-full rounded-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition"
                     >
-                        <img src="../src/assets/google.png" alt="Google" className="h-5 w-5" />
+                        <img src="/google.png" alt="Google" className="h-5 w-5" />
                         Continue with Google
                     </button>
 

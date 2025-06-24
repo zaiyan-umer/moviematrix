@@ -40,7 +40,7 @@ function Navbar({ isSignup = false, isLoggedIn = false }) {
         <img
           loading='lazy'
           className='w-[190px] max-sm:w-[100px] cursor-pointer'
-          src="../src/assets/Netflix_Logo_RGB.png"
+          src="/Netflix_Logo_RGB.png"
           alt="Netflix"
         />
       </Link>
@@ -82,7 +82,7 @@ function Navbar({ isSignup = false, isLoggedIn = false }) {
             <Link to='/account'>
               <img
                 className='max-w-[40px] max-sm:w-[30px] cursor-pointer'
-                src="../src/assets/user.png"
+                src="/user.png"
                 alt="User"
               />
             </Link>

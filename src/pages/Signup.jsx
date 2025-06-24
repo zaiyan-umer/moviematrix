@@ -117,7 +117,7 @@ function Signup({ setIsLoading }) {
               onClick={googleAuthHandler}
               className="flex items-center cursor-pointer justify-center gap-3 bg-white text-black font-semibold py-2 px-4 w-[300px] rounded-sm hover:bg-gray-200 transition"
             >
-              <img src="../src/assets/google.png" alt="Google" className="h-5 w-5" />
+              <img src="/google.png" alt="Google" className="h-5 w-5" />
 
               Sign up with Google
             </button>
