@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axios from '../axios/axios';
+import axios from '../data/axios';
 import Navbar from '../components/Navbar';
 import { ArrowLeft } from 'lucide-react';
 import MovieCard from '../components/MovieCard';

@@ -1,12 +1,10 @@
-import { React, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Heart, Search } from 'lucide-react';
-import axios from '../axios/axios';
 
 function Navbar({ isSignup = false, isLoggedIn = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
   const navigate = useNavigate()
 
   const handleShow = () => {
@@ -21,12 +19,7 @@ function Navbar({ isSignup = false, isLoggedIn = false }) {
 
   const handleSearch = async () => {
     if (!searchTerm.trim()) return;
-    try {
-      const { data } = await axios.get(`/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(searchTerm)}&language=en-US`);
-      navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
-    } catch (err) {
-      console.log(err.message);
-    }
+    navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
   };
 
   return (

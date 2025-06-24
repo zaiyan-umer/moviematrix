@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
+import { useState, useEffect, useContext, useRef } from 'react';
 import Banner from '../components/Banner';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,8 @@ import { AuthContext } from '../context/AuthContext';
 
 function ForgotPassword({ setIsLoading }) {
     const [isSm, setIsSm] = useState(window.innerWidth <= 640);
+    const emailRef = useRef(null);
+    const { forgotPassword, error, setError } = useContext(AuthContext);
 
     useEffect(() => {
         const handleResize = () => {
@@ -15,9 +17,6 @@ function ForgotPassword({ setIsLoading }) {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-
-    const emailRef = useRef(null);
-    const { forgotPassword, error, setError } = useContext(AuthContext);
 
     const handleForgotPassword = async (e) => {
         setIsLoading(true);

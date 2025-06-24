@@ -1,7 +1,7 @@
-import { React, useState, useEffect, useContext } from 'react';
-import axios from '../axios/axios';
-import requests from '../axios/requests';
-import { fetchTrailerId } from '../axios/fetchTrailer';
+import { useState, useEffect, useContext } from 'react';
+import axios from '../data/axios';
+import requests from '../data/requests';
+import { fetchTrailerId } from '../data/fetchTrailer';
 import TrailerNotAvailable from './TrailerNotAvailable';
 import TrailerPlayer from './TrailerPlayer';
 import { AuthContext } from '../context/AuthContext';

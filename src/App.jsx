@@ -37,11 +37,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={currentUser ? <Main setIsLoading={setIsLoading} /> : <LandingPage />} />
-        <Route path="/signup" element={currentUser ? <Main setIsLoading={setIsLoading} /> : <Signup setIsLoading={setIsLoading} />} />
-        <Route path="/login" element={currentUser ? <Main setIsLoading={setIsLoading} /> : <Login isLoading={isLoading} setIsLoading={setIsLoading} />} />
-        <Route path="/forgot" element={currentUser ? <Main setIsLoading={setIsLoading} /> : <ForgotPassword setIsLoading={setIsLoading} />} />
-        <Route path="/account" element={currentUser ? <Account setIsLoading={setIsLoading} /> : <LandingPage />} />
+        <Route path="/" element={currentUser ? <Main /> : <LandingPage />} />
+        <Route path="/signup" element={currentUser ? <Main /> : <Signup setIsLoading={setIsLoading} />} />
+        <Route path="/login" element={currentUser ? <Main /> : <Login setIsLoading={setIsLoading} />} />
+        <Route path="/forgot" element={currentUser ? <Main  /> : <ForgotPassword setIsLoading={setIsLoading} />} />
+        <Route path="/account" element={currentUser ? <Account /> : <LandingPage />} />
         <Route path="/subscriptions" element={currentUser ? <SubscriptionUnavailable /> : <LandingPage />} />
         <Route path="/favorites" element={currentUser ? <Favorites /> : <LandingPage />} />
         <Route path="/movie/:id" element={currentUser ? <MoviePage /> : <LandingPage />} />

@@ -1,8 +1,6 @@
-import { React, useContext, useEffect } from 'react'
 import Banner from '../components/Banner'
 import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom'
-
 
 function LandingPage() {
     const navigate = useNavigate();

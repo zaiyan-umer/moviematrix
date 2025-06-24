@@ -1,11 +1,10 @@
-import React from 'react'
 import Navbar from '../components/Navbar'
 import MovieBanner from '../components/MovieBanner'
 import MovieRow from '../components/MovieRow'
-import requests from '../axios/requests'
+import requests from '../data/requests'
 
 
-function Main({ setIsLoading }) {
+function Main() {
     return (
         <>
             <Navbar isLoggedIn />

@@ -82,7 +82,6 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  // On auth state change, set user and load favorites
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setCurrentUser(user);

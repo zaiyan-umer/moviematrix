@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
+import { useState, useEffect, useContext, useRef } from 'react';
 import Banner from '../components/Banner';
 import Navbar from '../components/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
-function Login({ isLoading, setIsLoading }) {
+function Login({ setIsLoading }) {
     const { login, googleSignIn, error, setError, setCurrentUser } = useContext(AuthContext);
     const emailRef = useRef(null);
     const passRef = useRef(null);

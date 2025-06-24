@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TrailerNotAvailable = (props) => {
     const {setNoTrailerFor, noTrailerFor} = props;
     return (

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext, Suspense, lazy } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import Navbar from '../components/Navbar';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchTrailerId } from '../axios/fetchTrailer';
+import { fetchTrailerId } from '../data/fetchTrailer';
 import { Helmet } from 'react-helmet';
 import { debounce } from 'lodash';
 import { Play, Plus, Heart, ArrowLeft } from 'lucide-react';

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import axios from '../axios/axios';
+import { useState, useEffect, useRef } from 'react';
+import axios from '../data/axios';
 import { Helmet } from 'react-helmet';
 import MovieCard from './MovieCard';
 

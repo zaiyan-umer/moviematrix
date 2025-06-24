@@ -1,4 +1,3 @@
-import React from "react";
 import YouTube from "react-youtube";
 
 const TrailerPlayer = ({ trailerId, onClose }) => {
@@ -18,7 +17,7 @@ const TrailerPlayer = ({ trailerId, onClose }) => {
                     onClick={onClose}
                     className="absolute -top-2 -right-4 max-sm:right-[20px] w-[20px] transition cursor-pointer"
                 >
-                    <img className="object-cover" src="../src/assets/close.png" alt="" />
+                    <img className="object-cover" src="/close.png" alt="" />
                 </button>
 
                 <YouTube

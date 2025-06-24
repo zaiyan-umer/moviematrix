@@ -1,14 +1,15 @@
-import React, { useContext, useCallback } from 'react';
+import { useContext, useCallback } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import avatar from '/user.png';
 import PlanCard from '../components/PlanCard';
-import plans from '../axios/planData';
-import { ArrowLeft } from 'lucide-react'; // Optional: if you're using Lucide icons
+import plans from '../data/planData';
+import { ArrowLeft } from 'lucide-react';
 
 function AccountPage({ setIsLoading }) {
   const { currentUser, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const handleBack = useCallback(() => navigate('/'), [navigate]);
 
   const handleLogout = async () => {
     setIsLoading(true);
@@ -16,8 +17,6 @@ function AccountPage({ setIsLoading }) {
     navigate('/');
     setIsLoading(false);
   };
-
-  const handleBack = useCallback(() => navigate(-1), [navigate]);
 
   return (
     <div className="min-h-screen bg-black text-white py-10 px-4">
@@ -40,7 +39,6 @@ function AccountPage({ setIsLoading }) {
           />
         </div>
 
-        {/* Plans Section */}
         <h2 className="text-3xl font-bold mb-6">Choose Your Plan</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
@@ -50,7 +48,6 @@ function AccountPage({ setIsLoading }) {
 
         </div>
 
-        {/* Sign Out Button */}
         <button
           onClick={handleLogout}
           className="mt-12 w-full bg-red-600 hover:bg-red-700 py-3 rounded font-semibold text-white cursor-pointer"
