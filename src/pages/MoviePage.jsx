@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 import { debounce } from 'lodash';
 import { Play, Plus, Heart, ArrowLeft } from 'lucide-react';
 import MovieNotAvailable from '../components/MovieNotAvailable';
-import defaultProfile from '../assets/profile3.png';
+import defaultProfile from '/profile3.png';
 
 const TrailerPlayer = lazy(() => import('../components/TrailerPlayer'));
 const TrailerNotAvailable = lazy(() => import('../components/TrailerNotAvailable'));

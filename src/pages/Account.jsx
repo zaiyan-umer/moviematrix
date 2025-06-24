@@ -1,7 +1,7 @@
 import React, { useContext, useCallback } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import avatar from '../assets/user.png';
+import avatar from '/user.png';
 import PlanCard from '../components/PlanCard';
 import plans from '../axios/planData';
 import { ArrowLeft } from 'lucide-react'; // Optional: if you're using Lucide icons
