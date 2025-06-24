@@ -24,6 +24,7 @@ function ForgotPassword({ setIsLoading }) {
 
         if (!emailRef.current.value) {
             setError('Please enter your email');
+            setIsLoading(false);
             return;
         }
 
@@ -54,7 +55,7 @@ function ForgotPassword({ setIsLoading }) {
                     <h1 className="font-bold tracking-tight text-3xl text-center">Forgor Password</h1>
                     <p className="text-sm text-gray-300 mt-2 text-center">Enter your email and we'll send you reset instructions.</p>
 
-                    <form autocomplete="off" className="flex flex-col items-center justify-center w-full mt-8 gap-4" onSubmit={handleForgotPassword}>
+                    <form autoComplete="off" className="flex flex-col items-center justify-center w-full mt-8 gap-4" onSubmit={handleForgotPassword}>
                         <input
                             ref={emailRef}
                             type="email"

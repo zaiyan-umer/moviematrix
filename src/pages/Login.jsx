@@ -36,7 +36,8 @@ function Login({ setIsLoading }) {
             if (passRef.current) passRef.current.value = '';
             navigate('/');
         } catch (err) {
-            setError(err.message);
+            console.log(err.message);
+            setError("Please try again");
         } finally {
             setIsLoading(false);
         }
@@ -67,7 +68,7 @@ function Login({ setIsLoading }) {
                 <div className="w-full max-w-[430px] p-8 rounded-lg bg-black/70 text-white">
                     <h1 className="font-bold tracking-tight text-3xl text-center">Sign In</h1>
 
-                    <form className="flex flex-col items-center justify-center w-full mt-8 gap-4" autocomplete="off" onSubmit={handleLogin}>
+                    <form className="flex flex-col items-center justify-center w-full mt-8 gap-4" autoComplete="off" onSubmit={handleLogin}>
                         <input
                             ref={emailRef}
                             type="email"

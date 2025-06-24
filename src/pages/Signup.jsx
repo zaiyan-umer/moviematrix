@@ -26,11 +26,13 @@ function Signup({ setIsLoading }) {
 
     if (!emailRef.current.value || !passRef.current.value || !confirmPassRef.current.value) {
       setError('Please fill all fields');
+      setIsLoading(false);
       return;
     }
 
     if (passRef.current.value !== confirmPassRef.current.value) {
       setError('Passwords do not match');
+      setIsLoading(false);
       return;
     }
 
@@ -46,6 +48,7 @@ function Signup({ setIsLoading }) {
       setIsLoading(false);
       navigate('/');
     }
+
   };
 
   const googleAuthHandler = async (e) => {
@@ -55,8 +58,8 @@ function Signup({ setIsLoading }) {
       const user = await googleSignIn();
       setError(null);
     } catch (err) {
-      setError(err.message);
-      console.log("abc: ", err);
+      console.log(err.message);
+      setError("Please try again");
     } finally {
       setIsLoading(false);
       navigate('/');
@@ -76,7 +79,7 @@ function Signup({ setIsLoading }) {
           <form
             className="flex flex-col items-center justify-center w-full mt-8 gap-4"
             onSubmit={handleSignUp}
-            autocomplete="off"
+            autoComplete="off"
           >
             <input
               ref={emailRef}
