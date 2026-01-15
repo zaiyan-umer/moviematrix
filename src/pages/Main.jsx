@@ -27,7 +27,7 @@ function Main() {
                     <MovieRow title="MYSTERY MOVIES" fetchURL={requests.fetchMysteryMovies} />
                     <MovieRow title="SCI-FI MOVIES" fetchURL={requests.fetchSciFiMovies} />
                     <MovieRow title="ROMANTIC MOVIES" fetchURL={requests.fetchRomanticMovies} />
-                    {/* <MovieRow title="DOCUMENTARIES" fetchURL={requests.fetchDocumentaries} /> */}
+                    <MovieRow title="DOCUMENTARIES" fetchURL={requests.fetchDocumentaries} />
                     <MovieRow title="DRAMA MOVIES" fetchURL={requests.fetchDramaMovies} />
                     <MovieRow title="FANTASY MOVIES" fetchURL={requests.fetchFantasyMovies} />
                     <MovieRow title="CRIME MOVIES" fetchURL={requests.fetchCrimeMovies} />
