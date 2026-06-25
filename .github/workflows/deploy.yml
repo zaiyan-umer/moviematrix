@@ -26,7 +26,7 @@ jobs:
             push: true
             tags: ${{secrets::DOCKERHUB_USERNAME}}/moviematrix:latest
 
- deploy:
+  deploy:
     runs_on: ubuntu-latest
     needs: build-and-push
     steps:
