@@ -18,7 +18,7 @@ function LandingPage() {
                     Unlimited movies, TV shows, and more
                 </h1>
                 <h2 className='text-xl font-semibold max-md:text-lg text-center'>
-                    Starts at Rs 250. Cancel anytime.
+                    Starts at Rs 500. Cancel anytime.
                 </h2>
                 <h3 className='text-lg max-md:text-md max-sm:text-sm text-center'>
                     Ready to watch? Enter your email to create or restart your membership.
